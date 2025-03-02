@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl font-bold">Typing Speed Test <i class="fas fa-keyboard"></i></h1>
+            <p class="text-lg">Test your typing speed and accuracy!</p>
+        </header>
+        <main>
+            <div id="menu-container" class="relative mb-8">
+                <button id="menu-button" class="p-2 bg-blue-500 rounded hover:bg-blue-700">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+                <div id="menu-content" class="hidden absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-10">
+                    <div class="p-4">
+                        <p class="font-bold mb-2">Dynamic Difficulty:</p>
+                        <button id="easy-mode" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Easy</button>
+                        <button id="medium-mode" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Medium</button>
+                        <button id="hard-mode" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Hard</button>
+                    </div>
+                </div>
+            </div>
+            <div id="test-container" class="mb-8">
+                <div class="flex justify-between items-center">
+                    <p id="text-to-type" class="text-lg">Type this sentence to test your speed and accuracy.</p>
+                    <div id="timer" class="text-lg bg-gray-800 px-4 py-2 rounded"><i class="fas fa-clock"></i> <span id="time-display">00:00</span></div>
+                </div>
+                <input type="text" id="user-input" class="w-full p-2 mt-4 border rounded text-black" autocomplete="off" autofocus>
+                <div id="progress-bar-container" class="mt-4 bg-gray-800 rounded h-6">
+                    <div id="progress-bar" class="bg-blue-500 h-full rounded" style="width: 0%;"></div>
+                    <div id="progress-milestones" class="absolute w-full text-center text-white">
+                        <span id="milestone-50" class="hidden">50% completed</span>
+                    </div>
+                </div>
+            </div>
+            <div id="results-container" class="hidden">
+                <p id="wpm">WPM: <span id="wpm-value"></span> <i class="fas fa-tachometer-alt"></i></p>
+                <p id="accuracy">Accuracy: <span id="accuracy-value"></span> <i class="fas fa-bullseye"></i></p>
+                <button id="restart-button" class="mt-4 p-2 bg-blue-500 rounded hover:bg-blue-700"><i class="fas fa-redo"></i> Restart</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

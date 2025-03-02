@@ -1,0 +1,103 @@
+/* Custom Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif; /* Replace with your desired font */
+}
+
+#test-container {
+    background: linear-gradient(135deg, #1a202c, #3b5998);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+#results-container {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+input[type="text"].text-black {
+    color: black;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+}
+
+.misspelled {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Futuristic Design Elements */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+p, span {
+    font-family: 'Roboto', sans-serif;
+}
+
+#menu-container button {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Keypress Animation Styles */
+.key-press {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    user-select: none;
+}
+
+#timer {
+    background-color: #1a202c;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Progress Bar Styles */
+#progress-bar-container {
+    position: relative;
+    height: 1.5rem;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4299e1;
+    border-radius: 0.5rem;
+}
+
+#progress-milestones {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    #test-container, #results-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"].text-black {
+        font-size: 0.875rem;
+    }
+}
