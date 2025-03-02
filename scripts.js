@@ -4,6 +4,7 @@ const wpmValue = document.getElementById('wpm-value');
 const accuracyValue = document.getElementById('accuracy-value');
 const resultsContainer = document.getElementById('results-container');
 const restartButton = document.getElementById('restart-button');
+const nextButton = document.getElementById('next-button');
 const menuButton = document.getElementById('menu-button');
 const menuContent = document.getElementById('menu-content');
 const easyMode = document.getElementById('easy-mode');
@@ -193,6 +194,17 @@ restartButton.addEventListener('click', () => {
     gsap.to(resultsContainer, { duration: 0.5, opacity: 0, display: 'none' });
     startTest();
 });
+
+nextButton.addEventListener('click', () => {
+    gsap.to(resultsContainer, { duration: 0.5, opacity: 0, display: 'none' });
+    moveToNextSentence();
+    startTest();
+});
+
+function moveToNextSentence() {
+    const randomText = sampleTexts[difficulty][Math.floor(Math.random() * sampleTexts[difficulty].length)];
+    textToType.textContent = randomText;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     setDifficulty('easy');  // Set default difficulty to easy

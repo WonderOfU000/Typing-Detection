@@ -101,3 +101,19 @@ p, span {
         font-size: 0.875rem;
     }
 }
+
+/* Next Button Styles */
+#results-container .button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+#next-button {
+    background-color: #38a169;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #2f855a;
+}
